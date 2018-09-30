@@ -16,10 +16,11 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 @Table(name = "notices")
 public class Notice extends BaseEntity {
 	
-	@JsonBackReference
+	/*@JsonBackReference
     @ManyToOne
-    @JoinColumn(name = "owner_id")
-    private Owner owner;
+    @JoinColumn(name = "owner_id")*/
+	@Column(name = "owner_id")
+    private Integer ownerId;
     
     @Column(name = "content")
     private String content;
@@ -32,12 +33,12 @@ public class Notice extends BaseEntity {
         return this.content;
     }
 
-    public Owner getOwner() {
-        return this.owner;
+    public Integer getOwnerId() {
+        return this.ownerId;
     }
 
-    protected void setOwner(Owner owner) {
-        this.owner = owner;
+    protected void setOwnerId(Integer ownerId) {
+        this.ownerId = ownerId;
     }
 
 }

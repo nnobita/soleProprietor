@@ -1,8 +1,11 @@
 package com.example.soleProprietor.service;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.support.MutableSortDefinition;
+import org.springframework.beans.support.PropertyComparator;
 import org.springframework.stereotype.Service;
 
 import com.example.soleProprietor.model.Notice;
@@ -29,8 +32,11 @@ public class NoticeServiceImpl implements NoticeService {
 
     @Override
     public List<Notice> findByOwner(int ownerId) {
-        return repository.findByOwner(ownerId);
+        List<Notice> sortedNotices = repository.findByOwnerId(ownerId);
+        PropertyComparator.sort(sortedNotices, new MutableSortDefinition("lastUpdate", true, true));
+        return Collections.unmodifiableList(sortedNotices);
     }
+
 
     @Override
     public Notice findById(int id) {

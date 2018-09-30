@@ -11,10 +11,11 @@ public interface NoticeRepository extends Repository<Notice, Integer> {
 	
 	Notice findById(int id) throws DataAccessException;
 	
-	List<Notice> findByOwner(int ownerId) throws DataAccessException;
+	List<Notice> findByOwnerId(int ownerId) throws DataAccessException;
 
 	Notice save(Notice notice) throws DataAccessException;
 
 	void delete(Notice notice) throws DataAccessException;
 	
+	void deleteByOwnerId(int ownerId) throws DataAccessException;
 }

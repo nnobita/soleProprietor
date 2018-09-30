@@ -23,7 +23,7 @@ import com.example.soleProprietor.service.NoticeService;
 public class NoticeController {
     @Autowired
     private NoticeService userService;
-
+    
     @PostMapping
     public Notice create(@RequestBody Notice user){
         return userService.create(user);

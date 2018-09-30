@@ -1,10 +1,9 @@
 package com.example.soleProprietor.service;
 
-import java.util.Collection;
 import java.util.List;
 
 import org.springframework.dao.DataAccessException;
-import com.example.soleProprietor.model.Notice;
+
 import com.example.soleProprietor.model.Owner;
 
 public interface OwnerService {
