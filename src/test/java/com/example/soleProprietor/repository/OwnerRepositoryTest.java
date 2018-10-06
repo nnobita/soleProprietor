@@ -22,7 +22,6 @@ import com.example.soleProprietor.model.Owner;
 @DataJpaTest
 @TestPropertySource(
 		  locations = "classpath:application-test.properties")
-@AutoConfigureTestDatabase(replace = Replace.NONE)
 public class OwnerRepositoryTest {
     //@Autowired
     //private TestEntityManager entityManager;
