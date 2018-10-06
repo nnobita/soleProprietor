@@ -51,7 +51,11 @@ public interface OwnerRepository extends Repository<Owner, Integer> {
      * found)
      */
     List<Owner> findByStatus(int status) throws DataAccessException;
-
+    
+    List<Owner> findByName(String name) throws DataAccessException;
+    
+    List<Owner> findByNameContaining(String name) throws DataAccessException;
+    
     /**
      * Retrieve an <code>Owner</code> from the data store by id.
      *
