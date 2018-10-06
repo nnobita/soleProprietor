@@ -7,21 +7,14 @@ import java.sql.Timestamp;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.example.soleProprietor.SoleProprietorApplication;
 import com.example.soleProprietor.model.Owner;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = SoleProprietorApplication.class)
 @DataJpaTest
-@TestPropertySource(
-		  locations = "classpath:application-test.properties")
 public class OwnerRepositoryTest {
     //@Autowired
     //private TestEntityManager entityManager;
