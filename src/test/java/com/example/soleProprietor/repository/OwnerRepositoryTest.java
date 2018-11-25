@@ -15,6 +15,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.example.soleProprietor.model.Owner;
+import com.google.gson.Gson;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
